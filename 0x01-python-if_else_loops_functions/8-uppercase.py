@@ -6,7 +6,7 @@ def uppercase(str):
         if letter >= 97 and letter_num <= 122:
             letter_num -= 32
             letter = chr(letter_num)
-            print(f'{letter}', end="")
+            print('{}'.format(letter), end="")
         else:
-            print(f'{letter}', end = "")
+            print('{}'.format(letter), end = "")
 
