@@ -20,7 +20,7 @@ int check_cycle(listint_t *list)
 
 	while (turtle && hare && hare->next)
 	{
-		if (turtel == hare)
+		if (turtle == hare)
 			return (1);
 		
 		turtle = turtle->next;
