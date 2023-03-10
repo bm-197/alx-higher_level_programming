@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-form sys import *
-if not argv[1]:
+import sys
+len = len(argv) - 1
+if len == 0:
     print('0 arguments.')
-if argv[1] and len(argv) == 2:
+if len == 1:
     print('1 argument:')
 else:
-     print('{} arguments:'.foramt(len(argv) - 1))
-for i in range(1, len(argv)):
-    print('{}: {}'.format(i, argv[i]))
+     print("{} arguments:".foramt(len(sys.argv) - 1))
+for i in range(cout):
+    print('{}: {}'.format(i + 1, sys.argv[i + 1]))
