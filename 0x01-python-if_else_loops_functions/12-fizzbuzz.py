@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 
-
 def fizzbuzz():
     """prints the numbers from 1 to 100 separated by a space"""
     for num in range(1, 101):
