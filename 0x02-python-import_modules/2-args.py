@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 if __name__ == "__main__":
-    mport sys
+    import sys
     """number of and list of its arguments."""
 
     if len(sys.argv) == 1:
