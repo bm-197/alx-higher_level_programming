@@ -5,11 +5,11 @@ if __name__ == "__main__":
     """number of and list of its arguments."""
 
     ind = len(sys.argv) - 1
-    if ind == 1:
+    if ind == 0:
         print("0 arguments.")
-    elif ind == 2:
+    elif ind == 1:
         print("{} argument:".format(ind))    
     else:
         print("{} arguments:".format(ind))
-    for i in range(1, ind):
+    for i in range(ind):
         print("{}: {}".format(i, sys.argv[i]))
