@@ -5,7 +5,6 @@ if __name__ == "__main__":
     """result of the addition of all arguments"""
 
     result = 0
-    for i in range(1, len(sys.argv) + 1):
+    for i in range(1, len(sys.argv) + 2):
         result+=int(sys.argv[i])
-
     print(result)
