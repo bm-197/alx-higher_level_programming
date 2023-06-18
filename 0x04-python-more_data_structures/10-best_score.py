@@ -8,7 +8,7 @@ def best_score(a_dictionary):
         for k in a_dictionary.keys():
             if a_dictionary[k] > big_int:
                 big_int = a_dictionary[k]
-        return list(a_dictionary.keys()\
-                )[list(a_dictionary.values()).index(big_int)]
+        ind = list(a_dictionary.values()).index(big_int)
+        return list(a_dictionary.keys())[ind]
     else:
         return None
