@@ -7,5 +7,5 @@ def uniq_add(my_list=[]):
     for i in range(len(my_list)):
         if my_list[i] not in a:
             a.append(my_list[i])
-            result+=my_list[i]
+            result += my_list[i]
     return result
