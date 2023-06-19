@@ -1,4 +1,6 @@
 #include "lists.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * is_palindrome - checks if a singly linked list is a palindrome.
