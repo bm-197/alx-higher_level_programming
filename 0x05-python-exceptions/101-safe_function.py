@@ -1,6 +1,15 @@
 #!/usr/bin/python3
 
 def safe_function(fct, *args):
+    """Excutes a functions safely
+
+    Args:
+        fct (function): the function to excute
+        args (key word arg): argument for fct
+
+    Returns:
+        the result of the function or None
+    """
     try:
         result = fct(*args)
         return (result)
