@@ -72,7 +72,6 @@ class Square:
                 print("")
         return ("")
 
-my_square = Square(5, (0, 0))
-my_square()
+Square(5, (0, 0))
 
 print("--")
