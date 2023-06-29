@@ -71,7 +71,3 @@ class Square:
             if i != self.__size - 1:
                 print("")
         return ("")
-
-Square(5, (0, 0))
-
-print("--")
