@@ -61,5 +61,6 @@ class Rectangle:
         return ''
 
     def __repr__(self):
-        instance = f"Rectange({self.__width}, {self.__height})"
+        instance = "Rectange(" + str(self.__width)
+        instance += "," + str(self.__height) + ")"
         return instance
