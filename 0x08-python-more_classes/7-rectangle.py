@@ -59,6 +59,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
+
     def __str__(self):
         """Return a printable rectangle with # character"""
         if self.width == 0 or self.height == 0:
@@ -76,6 +77,6 @@ class Rectangle:
         return (inst)
 
     def __del__(self):
-        """deletion messege for every deletion."""
+        """Deletion messege for every deletion."""
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
