@@ -3,6 +3,7 @@
 
 
 class Rectangle:
+
     """Represent a rectangle.
 
     Attributes:
