@@ -5,7 +5,6 @@
 class Rectangle:
     """Represent a rectangle"""
 
-
     def __init__(self, width=0, height=0):
         """intialize a new rec.
 
@@ -41,4 +40,3 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-    
