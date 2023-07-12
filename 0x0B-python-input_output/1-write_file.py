@@ -4,11 +4,13 @@
 
 def write_file(filename="", text=""):
     """
-    writes a string to a text file (UTF8) and
-    returns the number of characters written.
+    writes a string to file:
+
+     Args:
+        filename (str): The name of the file to write.
+        text (str): The text to write to the file.
+    Returns:
+        The number of characters written.
     """
-    lines = 0
-    with open(filename) as f:
-        for line in f:
-            lines += 1
-        return lines
+    with open(filename, "w", encode="utf-8") as f:
+        return f.write(text)
