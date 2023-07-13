@@ -11,7 +11,7 @@ def pascal_triangle(n):
         return []
     result = [[1]]
 
-    for i in range(n):
+    for i in range(n - 1):
         tri = result[-1]
         row = [1]
         for j in range(i):
