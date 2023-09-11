@@ -2,8 +2,8 @@
 """Define a class that inherits form class list."""
 
 class MyList(list):
-    """implements sorted printing."""
+    """implements sorted printinig."""
 
     def print_sorted(self):
-        """sortes the list.""
+        """sortes the list."""
         print(sort(self))
