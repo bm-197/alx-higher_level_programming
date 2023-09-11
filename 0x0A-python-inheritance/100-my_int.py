@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-
-
-
 """Define a subclass of int."""
 
 class MyInt(int):
