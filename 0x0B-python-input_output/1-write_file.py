@@ -2,15 +2,19 @@
 """Define a writing file."""
 
 
-def write_file(filename="", text=""):
-    """Writes a string to a text file (UTF8)
-    
-    Args:
-        filename (str): The name of the file to write.
-        text (str): The text to write to the file.
+def append_after(filename="", search_string="", new_string=""):
+    """Insert text after each line containing a given string in a file.
 
-    Return:
-        the number of characters written.
+    Args:
+        filename (str): The name of the file.
+        search_string (str): The string to search for within the file.
+        new_string (str): The string to insert.
     """
-    with open(filename, 'w', encoding='utf-8') as f:
-        return f.write(text)
+    text = ""
+    with open(filename) as r:
+        for line in r:
+            text += line
+            if search_string in line:
+                text += new_string
+    with open(filename, "w") as w:
+        w.write(text)
