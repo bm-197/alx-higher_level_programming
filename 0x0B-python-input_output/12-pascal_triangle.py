@@ -8,12 +8,14 @@ def pascal_triangle(n):
     Return:
          list of lists of integers representing triangle.
     """
-    tri = [[1], [1,1]]
+    if n <= 0:
+        return []
+    tri = [[1]]
 
-    for i in range(n-2):
+    for i in range(n-1):
         row = [1]
-        for j in range(i+1):
-            val = tri[i+1][j] + tri[i+1][j+1]
+        for j in range(i):
+            val = tri[i][j] + tri[i][j+1]
             row.append(val)
         row.append(1)
         tri.append(row)
