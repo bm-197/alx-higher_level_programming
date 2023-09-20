@@ -94,7 +94,7 @@ class Rectangle(Base):
         if args and len(args) != 0:
             a = 0
             for arg in args:
-                if a = 0:
+                if a == 0:
                     if arg == None:
                         self.__init__(self.width, self.height, self.x, self.y)
                     else:
