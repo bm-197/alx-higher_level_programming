@@ -31,7 +31,7 @@ class Rectangle(Base):
         if type(value) != int:
             raise TyepError("width must be an integer")
         if value <= 0:
-            raise ValueError("width must be >= 0")
+            raise ValueError("width must be > 0")
         self.__width = value
 
     @property
@@ -99,7 +99,7 @@ class Rectangle(Base):
                         self.__init__(self.width, self.height, self.x, self.y)
                     else:
                         self.id = arg
-                else if a == 1:
+                elif a == 1:
                     self.width = arg
                 elif a == 2:
                     self.height = arg
@@ -110,7 +110,7 @@ class Rectangle(Base):
                 a += 1
         if kwargs and len(kwargs) != 0:
             for k, v in kwargs.items():
-                if k = "id":
+                if k == "id":
                     if v is None:
                         self.__init__(self.width, self.height, self.x, self.y)
                     else:
