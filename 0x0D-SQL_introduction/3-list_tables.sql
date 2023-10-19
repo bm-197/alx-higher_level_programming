@@ -1,2 +1,3 @@
 --lists all the tables.
-SHOW TABLE;
+SHOW TABLES;
+
