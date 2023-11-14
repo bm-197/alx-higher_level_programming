@@ -1,7 +1,5 @@
 #!/usr/bin/node
 
-const num = Number(process.argv[2]);
-
 function factorial (num) {
 
 	if (num > 0) {
