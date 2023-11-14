@@ -3,20 +3,20 @@
 module.exports = class Rectangle {
     constructor (w, h) {
         if (w === 0 ||h === 0) {
-            this.w = w;
-            this.h = h;
+            this.width = w;
+            this.height = h;
         }
     }
     print () {
-        for (let i = 0; i < this.h; i++) {
-            console.log('X'.repeat(this.w));
+        for (let i = 0; i < this.height; i++) {
+            console.log('X'.repeat(this.width));
         }
     }
     rotate () {
-        [this.w, this.h] = [this.h, this.w];
+        [this.width, this.height] = [this.height, this.width];
     }
     double () {
-        this.w = 2 * this.w;
-        this.h = 2 * this.h;
+        this.width = 2 * this.width;
+        this.height = 2 * this.height;
     }
 };
