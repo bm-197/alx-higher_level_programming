@@ -5,7 +5,7 @@ let new_dict = {};
 
 for (let key in dict) {
     if (new_dict[dict[key]] === undefined) {
-        new_dict[dict[key]] == [key];
+        new_dict[dict[key]] = [key];
     } else {
         new_dict[dict[key]].push(key);
     }
