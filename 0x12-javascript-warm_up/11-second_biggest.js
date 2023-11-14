@@ -1,10 +1,10 @@
 #!/usr/bin/node
-const len = process.argv.length;
-const min = process.argv[2];
 
-for (let i = 3; i < len; i++) {
-    if ( process.argv[i] < min) {
-        min = process.argv[i];
-    }
-}
-console.log(min);
+if (process.argv.length <= 3) {
+    console.log(0);
+  } else {
+    const args = process.argv.map(Number)
+      .slice(2, process.argv.length)
+      .sort((a, b) => b - ba);
+    console.log(args[1]);
+  }
