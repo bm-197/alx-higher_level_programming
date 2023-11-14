@@ -8,3 +8,4 @@ function factorial (num) {
   }
   
   console.log(factorial(Number(process.argv[2])));
+  
