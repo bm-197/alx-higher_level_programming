@@ -15,6 +15,12 @@ if __name__ == "__main__":
     c.execute("SELECT c.name\
         FROM cities AS c\
             INNER JOIN states AS s\
-                WHERE c.state_id = s.id")
-    
-    [print(city) for city in c.fetchall() if city == sys.argv[4]]
+                ON c.state_id = s.id\
+                WHERE s.name = %s\
+                    ORDER BY c.id", (sys.argv[4], ))
+    rows = c.fetchall()
+
+    for i in range(len(rows)):
+        print(rows[i][0], end=", " if i + 1 < len(rows) else "")
+    print("")
+        
