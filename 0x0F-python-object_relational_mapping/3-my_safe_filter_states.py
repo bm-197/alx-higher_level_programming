@@ -9,10 +9,18 @@ import sys
 import MySQLdb
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
-    c = db.cursor()
-    c.execute("SELECT * \
-        FROM `states`\
-            WHERE BINARY `name` = %s", (sys.argv[4], ))
-    rows = c.fetchall()
+    mySQL_u = sys.argv[1]
+    mySQL_p = sys.argv[2]
+    db_name = sys.argv[3]
+
+    searched_name = sys.argv[4]
+
+    # By default, it will connect to localhost:3306
+    db = MySQLdb.connect(user=mySQL_u, passwd=mySQL_p, db=db_name)
+    cur = db.cursor()
+
+    cur.execute("SELECT * FROM states WHERE name = %s ORDER BY id",
+                (searched_name, ))
+    rows = cur.fetchall()
+
     [print(row) for row in rows]
