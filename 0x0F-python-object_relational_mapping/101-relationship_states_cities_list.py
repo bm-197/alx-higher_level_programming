@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Script that lists all `City` objects from the database `hbtn_0e_101_usa`.
+Script that lists all `State` objects, and corresponding
+`City` objects, contained in the database `hbtn_0e_101_usa`.
 
 Arguments:
     mysql username (str)
@@ -29,7 +30,9 @@ if __name__ == "__main__":
 
     session = Session(bind=engine)
 
-    cities = session.query(City)
+    states = session.query(State)
 
-    for city in cities:
-        print("{}: {} -> {}".format(city.id, city.name, city.state.name))
+    for state in states:
+        print("{}: {}".format(state.id, state.name))
+        for city in state.cities:
+            print("\t{}: {}".format(city.id, city.name))
