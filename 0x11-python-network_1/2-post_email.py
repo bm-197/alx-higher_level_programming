@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"""cript that takes in a URL, sends a request to the
-URL and displays the body of the response (decoded
-in utf-8)."""
+"""cript that takes in a URL and an email, sends a
+POST request to the passed URL with the email as
+parameter, and displays the body of the response
+(decoded in utf-8)"""
 
 from urllib import request
 from sys import argv
